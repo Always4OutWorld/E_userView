@@ -22,9 +22,6 @@ axiosService.interceptors.response.use(
   },
   error => {
     if (error.response) {
-      if (error.response.status === 401) {
-        // error
-      }
       console.log('error.response: ', error.response);
     } else {
       console.log('error.config: ', error.config);

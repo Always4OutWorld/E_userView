@@ -1,6 +1,7 @@
-import {call, put, takeEvery} from 'redux-saga/effects';
+import {call, put, takeEvery, takeLatest} from 'redux-saga/effects';
 import Api from '../../services/Api';
 import {GET_USER_DATA} from '../actions/user';
+import {USER_LIST} from './constant';
 
 interface ResponseGenerator{
     config?:any,
@@ -18,9 +19,9 @@ function* handlers() {
 function* fetchUser() {
     try {
        const response:ResponseGenerator = yield call(Api.fetch_userData);
-       yield put({type: "USER_FETCH_SUCCEEDED", user: response});                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+       yield put({type: USER_LIST, user: response});
     } catch (e: any) {
-        yield put({type: "USER_FETCH_FAILED", message: e.message});
+        yield put({type: USER_LIST, message: e.message});
     }
  }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 

@@ -6,7 +6,7 @@ import {
     DarkTheme as NavigationDarkTheme,
   } from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import UserView from '../screens/userView';
+import UserView from '../screens/UserView';
 import getTheme from '../utils/theme';
 
 const Stack = createStackNavigator();

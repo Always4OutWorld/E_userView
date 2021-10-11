@@ -1,12 +1,15 @@
 import { combineReducers } from 'redux';
 import { fetch_user } from "./user";
 
-const rootReducer = {
-    fetch_user
+interface DefaultRootState {
+    user: any;
+}
+
+const rootReducer: DefaultRootState = {
+    user: fetch_user
 };
 
 
 const reducer = combineReducers(rootReducer)
   
-export default reducer;
-  
+export default reducer;  
