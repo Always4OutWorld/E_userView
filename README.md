@@ -26,3 +26,9 @@ Instructions
 4. Add an error boundary to capture errors within the app.
 5. Submit your completed project to your public GitHub repo and share the link with your
 point of contact.
+
+
+![alt text](https://res.cloudinary.com/dzb83gkul/image/upload/v1633970326/Bug/oo6v1gfit9fd66uhbbre.png)
+
+![alt text](https://res.cloudinary.com/dzb83gkul/image/upload/v1633970327/Bug/urtux53yoh0ibfus7yzq.png)
+

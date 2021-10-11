@@ -19,7 +19,7 @@ const DetailsView: FC<DetailsProps> = ({route, navigation}) => {
         navigation.setParams({ param: { title: 'sjhsdjadsh'} })
     }, []);
     if (!email) {
-        throw new Error('I crashed!');
+        throw new Error('No user found');
     } 
     return (
         <View style={styles.container}>
