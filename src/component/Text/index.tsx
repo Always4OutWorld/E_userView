@@ -2,11 +2,11 @@ import React, {FC} from 'react';
 import {StyleSheet, TextStyle, Text as MyText} from 'react-native';
 
 interface Props {
-  size: string;
+  size?: string;
   style?: TextStyle;
 }
 
-const Text: FC<Props> = ({children, size, style, ...remainingProps}) => {
+const Text: FC<Props> = ({children, size = 'h4', style, ...remainingProps}) => {
   return (
     <MyText numberOfLines={1} style={[styles[size], style]} {...remainingProps}>
       {children}

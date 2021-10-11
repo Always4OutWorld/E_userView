@@ -3,3 +3,7 @@ export interface UserList {
     index: number,
     separators: any,
 }
+
+export interface UserListProps {
+    navigation?: any,
+}

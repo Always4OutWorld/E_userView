@@ -8,6 +8,7 @@ import {
 import {createStackNavigator} from '@react-navigation/stack';
 import UserView from '../screens/UserView';
 import getTheme from '../utils/theme';
+import DetailsView from '../screens/DetailsView';
 
 const Stack = createStackNavigator();
 
@@ -20,12 +21,18 @@ const RootNavigation = () => {
 
   return (
       <NavigationContainer theme={getTheme(isDarkTheme ? NavigationDarkTheme : NavigationTheme)}>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="UserView">
           <Stack.Screen
             key="home"
             options={{ title: 'User View'}}
             name="UserView"
             component={UserView}
+          />
+           <Stack.Screen
+            key="detailView"
+            name="DetailsView"
+            options={({ route }: any) => ({ title: route.params.name })}
+            component={DetailsView}
           />
         </Stack.Navigator>
       </NavigationContainer>
