@@ -9,6 +9,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import UserView from '../screens/UserView';
 import getTheme from '../utils/theme';
 import DetailsView from '../screens/DetailsView';
+import ErrorBoundary from '../utils/ErrorBoundary';
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,12 @@ const RootNavigation = () => {
             name="DetailsView"
             options={({ route }: any) => ({ title: route.params.name })}
             component={DetailsView}
+          />
+           <Stack.Screen
+            key="error"
+            name="error"
+            options={{headerShown: false}}
+            component={ErrorBoundary}
           />
         </Stack.Navigator>
       </NavigationContainer>

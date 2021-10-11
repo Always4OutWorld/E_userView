@@ -19,8 +19,8 @@ const DetailsView: FC<DetailsProps> = ({route, navigation}) => {
         navigation.setParams({ param: { title: 'sjhsdjadsh'} })
     }, []);
     if (!email) {
-        navigation.navigate('UserView');
-    }
+        throw new Error('I crashed!');
+    } 
     return (
         <View style={styles.container}>
             <View>
