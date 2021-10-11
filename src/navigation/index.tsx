@@ -23,8 +23,8 @@ const RootNavigation = () => {
         <Stack.Navigator>
           <Stack.Screen
             key="home"
-            options={{headerShown: false}}
-            name="Home"
+            options={{ title: 'User View'}}
+            name="UserView"
             component={UserView}
           />
         </Stack.Navigator>
