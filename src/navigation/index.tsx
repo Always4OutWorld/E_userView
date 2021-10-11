@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Appearance} from 'react-native';
+import {Appearance, Image} from 'react-native';
 import {
     NavigationContainer,
     DefaultTheme as NavigationTheme,
@@ -10,6 +10,7 @@ import UserView from '../screens/UserView';
 import getTheme from '../utils/theme';
 import DetailsView from '../screens/DetailsView';
 import ErrorBoundary from '../utils/ErrorBoundary';
+import { LogoTitle } from '../component/CustomHeader';
 
 const Stack = createStackNavigator();
 
@@ -25,7 +26,7 @@ const RootNavigation = () => {
         <Stack.Navigator initialRouteName="UserView">
           <Stack.Screen
             key="home"
-            options={{ title: 'User View'}}
+            options={{ headerTitle: (props) => <LogoTitle /> }}
             name="UserView"
             component={UserView}
           />

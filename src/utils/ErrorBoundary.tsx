@@ -22,7 +22,7 @@ class ErrorBoundary extends Component {
         const {errorInfo}: any = this.state;
         if (errorInfo) {
             return (
-                <View>
+                <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', height: '100%'}}>
                     <Text>Something went wrong.</Text>
                 </View>
             );
