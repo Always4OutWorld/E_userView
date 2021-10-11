@@ -2,7 +2,7 @@ import React, {FC, useEffect} from "react";
 import { View, Image } from "react-native";
 import Text from "../../component/Text";
 import {DetailsProps} from './interface';
-import styles from "./style";
+import {styles} from "./style";
 import {getDateValidatetext} from '../../utils/funcUtils';
 import moment from "moment";
 

@@ -1,6 +1,6 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
     container: {
       flex: 1,
       padding: 2,
@@ -53,5 +53,3 @@ const styles = StyleSheet.create({
         width: '80%'
     }
 });
-
-export default styles;
