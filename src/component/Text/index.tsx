@@ -6,7 +6,7 @@ interface Props {
   style?: TextStyle;
 }
 
-const Text: FC<Props> = ({children, size = 'label', style, ...remainingProps}) => {
+const Text: FC<Props> = ({children, size = 'labelD', style, ...remainingProps}) => {
   return (
     <MyText numberOfLines={1} style={[styles[size], style]} {...remainingProps}>
       {children}
@@ -18,43 +18,53 @@ export default Text;
 
 const styles: any = StyleSheet.create({
   large: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: '400',
     color: 'black',
   },
   medium: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '400',
     color: 'black',
   },
   small: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '400',
     color: 'black',
   },
   label: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '400',
     color: 'grey',
   },
-  largeB: {
-    fontSize: 24,
-    fontWeight: '900',
+  labelD: {
+    fontSize: 14,
+    fontWeight: '400',
     color: 'black',
   },
-  mediumB: {
+  largeB: {
     fontSize: 20,
     fontWeight: '900',
     color: 'black',
   },
-  smallB: {
+  mediumB: {
     fontSize: 18,
     fontWeight: '900',
     color: 'black',
   },
-  labelB: {
+  smallB: {
     fontSize: 16,
     fontWeight: '900',
+    color: 'black',
+  },
+  labelB: {
+    fontSize: 14,
+    fontWeight: '900',
     color: 'grey',
+  },
+  labelBB: {
+    fontSize: 14,
+    fontWeight: '900',
+    color: 'balck',
   },
 });

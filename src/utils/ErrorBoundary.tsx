@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Text from "../component/Text";
-import {Button, View} from 'react-native';
+import {View} from 'react-native';
 
 class ErrorBoundary extends Component {
     constructor(props: any) {

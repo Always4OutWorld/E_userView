@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
     navigate: {
       flex: 0.3,
       flexDirection: 'row',
-      justifyContent: 'flex-start'
+      justifyContent: 'flex-end',
+      alignItems: 'center',
     },
     text: {
       marginLeft: 12,
@@ -29,7 +30,11 @@ const styles = StyleSheet.create({
     photo: {
       height: 40,
       width: 40,
-      borderRadius: 20,
+      padding: 4,
+      borderRadius: 2,
+    },
+    textContainer: {
+      marginLeft: 10,
     },
     photo2: {
       height: 20,

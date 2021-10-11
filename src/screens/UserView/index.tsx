@@ -14,20 +14,20 @@ const renderUserComponent = ({item}: UserList) => {
         <View style={styles.container}>
             <View style={styles.containerProfile}>
                 <Image source={{ uri: item?.picture?.large}} style={styles.photo} />
-                <View>
-                <Text size="h4">
-                    {`${item?.name?.title} ${item?.name?.first} ${item?.name?.last}`}
-                </Text>
-                <Text size="h4">
-                    {item?.email}
-                </Text>
-                <Text size="h4">
-                    {`Country | ${item?.location?.country}`}
-                </Text>
+                <View style={styles.textContainer}>
+                    <Text size="mediumB">
+                        {`${item?.name?.title} ${item?.name?.first} ${item?.name?.last}`}
+                    </Text>
+                    <Text size="labelD">
+                        {item?.email}
+                    </Text>
+                    <Text size="labelD">
+                        {`Country | ${item?.location?.country}`}
+                    </Text>
                 </View>
             </View>
             <View style={styles.navigate}>
-                <Text size="h4">{getDateValidatetext(item?.registered?.date)}</Text>
+                <Text size="label">{getDateValidatetext(item?.registered?.date)}</Text>
                 <Image source={{ uri: 'https://cdn4.iconfinder.com/data/icons/basic-app/1000/BASICAPP_1-02-512.png'}} style={styles.photo2} />
             </View>
         </View>
