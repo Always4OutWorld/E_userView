@@ -1,5 +1,5 @@
 import React, {FC} from "react";
-import { View, FlatList, Image, TouchableOpacity } from "react-native";
+import { View, FlatList, Image, TouchableOpacity, ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import styles from "./style";
 import Text from '../../component/Text';
@@ -56,7 +56,9 @@ const UserView: FC<UserListProps> = ({navigation}) => {
                 keyExtractor={(item: any, index: number) => index.toString()}
             />
             ) : (
-                <View><Text size="h3">No userList</Text></View>
+                <View style={styles.centreLoad}>
+                    {users?.length === 0 ? <Text size="h3">No userList</Text> : <ActivityIndicator size="large" />}
+                </View>
             )}
         </SafeAreaView>
     )

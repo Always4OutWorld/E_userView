@@ -41,6 +41,12 @@ const styles = StyleSheet.create({
         height: StyleSheet.hairlineWidth,
         backgroundColor: 'black',
     },
+    centreLoad: {
+      height: '100%',
+      width: '100%',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }
 });
 
 export default styles;
