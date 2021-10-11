@@ -7,3 +7,5 @@ export interface UserList {
 export interface UserListProps {
     navigation?: any,
 }
+
+export type IntialProps = null | [];

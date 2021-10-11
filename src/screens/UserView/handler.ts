@@ -2,12 +2,13 @@ import React, {useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {ToastAndroid} from 'react-native';
 import {GET_USER_DATA} from '../../redux/actions/user';
+import {IntialProps} from './interface';
 
 const userHandler = () => {
     const users = useSelector((state: any) => state?.user?.data);
-    const intialCount = 10;
+    const intialCount = 12;
     const [count, setCount] = useState(intialCount);
-    const [intialData, setIntial] = useState(null || []);
+    const [intialData, setIntial] = useState<IntialProps>(null);
     const [showLoader, setFooterLoad] = useState(true);
     const dispatch = useDispatch();
     useEffect(() => {
@@ -21,6 +22,9 @@ const userHandler = () => {
     useEffect(() => {
         if (users?.length === count) {
             setIntial(users);
+        }
+        if (users?.length === 0) {
+            setIntial([]);
         }
     }, [users]);
 
