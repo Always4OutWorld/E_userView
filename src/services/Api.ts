@@ -1,7 +1,7 @@
 import axiosService from "./axios";
 
 const fetch_userData = () => {
-  return axiosService.get("/user/sign-in", {});
+  return axiosService.get("/", {});
 };
 
 const Api = {
