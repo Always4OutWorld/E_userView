@@ -9,9 +9,9 @@ import {getDateValidatetext} from '../../utils/funcUtils';
 
 
 
-const renderUserComponent = ({item}: UserList) => {
+const renderUserComponent = ({item, id}: UserList) => {
     return (
-        <View style={styles.container}>
+        <View key={id} style={styles.container}>
             <View style={styles.containerProfile}>
                 <Image source={{ uri: item?.picture?.large}} style={styles.photo} />
                 <View style={styles.textContainer}>
@@ -54,9 +54,9 @@ const UserView: FC<UserListProps> = ({navigation}) => {
             {users?.length > 0 ? (
             <FlatList
                 data={users}
-                renderItem={(item: any) => {
+                renderItem={(item: any, id: number) => {
                 const name: string = `${item?.item?.name?.title} ${item?.item?.name?.first} ${item?.item?.name?.last}`;
-                return <TouchableOpacity onPress={() => navigation.navigate('DetailsView', { name: name , ...item })}>{renderUserComponent(item)}</TouchableOpacity>
+                return <TouchableOpacity onPress={() => navigation.navigate('DetailsView', { name: name , ...item })}>{renderUserComponent(item, id)}</TouchableOpacity>
                 }}
                 ItemSeparatorComponent={FlatListItemSeparator}
                 keyExtractor={(item: any, index: number) => index.toString()}
