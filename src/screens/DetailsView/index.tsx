@@ -29,17 +29,17 @@ const DetailsView: FC<DetailsProps> = ({route, navigation}) => {
             </View>
             <View style={styles.boxAlign}>
                 <View style={styles.hr} />
-                <Text>{`Email: ${email}`}</Text>
-                <Text>{`Date Joined: ${getDateValidatetext(registered?.date)}`}</Text>
-                <Text>{`DOB: ${moment(dob?.date).format(DATE_FORMAT_DOB)}`}</Text>
+                <Text size="small">{`Email: ${email}`}</Text>
+                <Text size="small">{`Date Joined: ${getDateValidatetext(registered?.date)}`}</Text>
+                <Text size="small">{`DOB: ${moment(dob?.date).format(DATE_FORMAT_DOB)}`}</Text>
             </View>
             <View style={styles.boxAlign}>
-                <Text style={styles.textLeft}>Location</Text>
+                <Text size="largeB" style={styles.textLeft}>Location</Text>
                 <View style={styles.hr} />
-                <Text>{`City: ${location?.city}`}</Text>
-                <Text>{`state:${location?.state}`}</Text>
-                <Text>{`country: ${location?.country}`}</Text>
-                <Text>{`postcode: ${location?.postcode}`}</Text>
+                <Text size="small">{`City: ${location?.city}`}</Text>
+                <Text size="small">{`state:${location?.state}`}</Text>
+                <Text size="small">{`country: ${location?.country}`}</Text>
+                <Text size="small">{`postcode: ${location?.postcode}`}</Text>
             </View>
         </View>
     )
