@@ -2,6 +2,8 @@
 
 user view app
 
+Android Platform.
+
 Requirements
 1. Create a simple app with a List View screen and Details View screen.
 2. Using the random user public API https://randomuser.me/documentation
