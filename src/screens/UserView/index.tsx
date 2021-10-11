@@ -38,11 +38,17 @@ const FlatListItemSeparator = () => {
     return (
       <View style={styles.separator} />
     );
-  }
+}
 
 
 const UserView: FC<UserListProps> = ({navigation}) => {
-    const {users} = userHandler();
+    const {users, loadMore, extraData, showLoader} = userHandler();
+    const Footer = () => {
+        if (!showLoader) {
+            return null;
+        }
+        return <ActivityIndicator size="large" />
+    }
     return (
         <SafeAreaView>
             {users?.length > 0 ? (
@@ -54,6 +60,11 @@ const UserView: FC<UserListProps> = ({navigation}) => {
                 }}
                 ItemSeparatorComponent={FlatListItemSeparator}
                 keyExtractor={(item: any, index: number) => index.toString()}
+                extraData={extraData}
+                onEndReached={() => {
+                    loadMore()
+                }}
+                ListFooterComponent={Footer}
             />
             ) : (
                 <View style={styles.centreLoad}>

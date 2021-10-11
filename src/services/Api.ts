@@ -1,7 +1,7 @@
 import axiosService from "./axios";
 
-const fetch_userData = () => {
-  return axiosService.get("https://randomuser.me/api/?results=30");
+const fetch_userData = ({ count = 20 }: any) => {
+  return axiosService.get(`https://randomuser.me/api/?results=${count}`);
 };
 
 const Api = {

@@ -16,9 +16,9 @@ function* handlers() {
     yield takeEvery(GET_USER_DATA, fetchUser);
 }
 
-function* fetchUser() {
+function* fetchUser(params: any) {
     try {
-       const response:ResponseGenerator = yield call(Api.fetch_userData);
+       const response:ResponseGenerator = yield call(Api.fetch_userData, params);
        yield put({type: USER_LIST, user: response});
     } catch (e: any) {
         yield put({type: USER_LIST, message: e.message});
