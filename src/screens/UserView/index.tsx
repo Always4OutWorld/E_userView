@@ -9,7 +9,7 @@ import {getDateValidatetext} from '../../utils/funcUtils';
 
 
 
-const renderUserComponent = ({item, id}: UserList) => {
+const renderUserComponent = ({item}: UserList, id: number) => {
     return (
         <View key={id} style={styles.container}>
             <View style={styles.containerProfile}>
