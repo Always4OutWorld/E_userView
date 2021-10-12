@@ -1,6 +1,15 @@
 import React, {Component} from "react";
 import Text from "../component/Text";
-import {View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%'
+  }
+});
 
 class ErrorBoundary extends Component {
     constructor(props: any) {
@@ -22,7 +31,7 @@ class ErrorBoundary extends Component {
         const {errorInfo}: any = this.state;
         if (errorInfo) {
             return (
-                <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', height: '100%'}}>
+                <View style={styles.container}>
                     <Text>Something went wrong.</Text>
                 </View>
             );
